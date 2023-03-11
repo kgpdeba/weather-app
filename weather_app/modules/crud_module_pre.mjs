@@ -18,7 +18,7 @@ function add(loc,tempC,tempF,text){
 }
 
 function remove(loc){
-   let del= weatherData.findIndex((item)=>item.location.toLowerCase()==loc.toLowerCase());
+   let del= weatherData.fin dIndex((item)=>item.location.toLowerCase()==loc.toLowerCase());
    weatherData.splice(del,1);
     
 }
@@ -44,13 +44,3 @@ update('berlin',43,1000,"Happy");
 console.log(weatherData);
 
 
-const a= ()=>{
-    console.log("1");
-
-}
-
-
-function a(){
-    console.log("2");
-
-}
