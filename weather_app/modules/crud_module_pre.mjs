@@ -18,7 +18,7 @@ function add(loc,tempC,tempF,text){
 }
 
 function remove(loc){
-   let del= weatherData.fin dIndex((item)=>item.location.toLowerCase()==loc.toLowerCase());
+   let del= weatherData.findIndex((item)=>item.location.toLowerCase()==loc.toLowerCase());
    weatherData.splice(del,1);
     
 }
