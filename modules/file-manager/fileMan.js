@@ -3,15 +3,16 @@
 const fs=require('fs');
 const path=require('path');
 
-//user-input
+//user-input install
 //npm i prompt-sync (in terminal)
-//shift+option+down-arrow- duplicate
+//shift+option+down-arrow (for duplicate)
 
+//user-input
 const prompt=require('prompt-sync')();
 let flag=1;
 while(flag)
 {
-    console.log('\n Please Enter your choice');
+    console.log('\n CHOOSE OPTIONS ');
     console.log('----------------------------'); 
     console.log('1 -> READ FILE');
     console.log('2 -> CREATE FILE');
@@ -57,8 +58,8 @@ while(flag)
     }
 
     else if(choiceNumber==5){
-        const oldFile=prompt("Please Provide the file name : ");
-        const newFile=prompt("Please Provide the file name : ");
+        const oldFile=prompt("Please Provide the Current file name : ");
+        const newFile=prompt("Please Provide the New file name : ");
         fs.renameSync(path.join(__dirname,`${oldFile}`),path.join(__dirname,`${newFile}`));
         console.log("File Renamed Succesfully. ");
     }
@@ -84,8 +85,8 @@ while(flag)
     }
 
     else if(choiceNumber==9){
-        const oldFolder=prompt("Please Provide the Folder name : ");
-        const newFolder=prompt("Please Provide the Folder name : ");
+        const oldFolder=prompt("Please Provide the Current Folder name : ");
+        const newFolder=prompt("Please Provide the New Folder name : ");
         fs.renameSync(path.join(__dirname,`${oldFolder}`),path.join(__dirname,`${newFolder}`));
         console.log("Folder Renamed Succesfully. ");
     }
